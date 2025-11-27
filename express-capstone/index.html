@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>Sample Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <h1>Welcome to the Sample Page</h1>
+    <p>This is a simple HTML page with linked CSS and JavaScript files.</p>
+    // (داخل فایل index.html)
+<script>
+    fetch('https://localhost:3000/users', {
+        headers: {
+            'x-api-key': 'my-super-secret-key-from-env'
+        }
+    })
+    .then(res => res.json())
+    .then(data => console.log(data))
+    .catch(err => console.error(err));
+</script>
+</body>
+</html>
